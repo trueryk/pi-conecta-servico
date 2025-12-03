@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    let currentUser = JSON.parse(localStorage.getItem('currUser'));
+    let currentUser = JSON.parse(localStorage.getItem('currUser')) || [];
 
     if (currentUser.length() == 0) {
         $('#navbar-site-ul').append(
