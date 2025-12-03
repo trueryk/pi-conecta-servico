@@ -1,8 +1,19 @@
+export function users_get() {
+    let user = JSON.parse(localStorage.getItem('user'));
+    return (user);
+}
+
+export function currUser_get() {
+    let currentUser = JSON.parse(localStorage.getItem('currUser'));
+    return (currentUser);
+}
+
 $(document).ready(function () {
     let campo_nome = $('#nome');
     let campo_email = $('#user-email');
     let campo_telefone = $('#telefone');
     let campo_senha = $('#senha');
+
 
     campo_telefone.mask('(00) 00000-0000');
 
@@ -23,6 +34,17 @@ $(document).ready(function () {
         });
     }
 
+    // function login_verified(email, senha) {
+    //     let user = JSON.parse(localStorage.getItem('user')) || [];
+    //     user.forEach((user, i) => {
+    //         if (user.email == email && user.senha == senha) {
+    //             let currentUser = JSON.parse(localStorage.getItem('currUser')) || [];
+    //             currentUser = user;
+    //             localStorage.setItem('currUser', JSON.stringify(currentUser));
+    //         }
+    //     });
+    // }
+
     $('#check-terms').click(function () {
         if ($('#check-terms').is(':checked') == true) {
             $('#btnCliente').removeAttr('disabled')
@@ -33,25 +55,6 @@ $(document).ready(function () {
         }
     });
 
-
-    //         let nome = $('#userName').val().trim()
-    //         let email = $('#userEmail').val().trim()
-    //         let data = $('#dataNasc').val()
-    //         if (!nome || !email || !data) {
-    //             $('#liveFailed > .toast-header > small').html(`${date.getHours()}:${date.getMinutes()}`)
-    //             toastFailed.show()
-    //         } else {
-    //             $('#liveSuccess > .toast-header > small').html(`${date.getHours()}:${date.getMinutes()}`)
-    //             $('#liveSuccess > .toast-body').html(`O usuário ${nome} foi cadastrado ao sistema!`)
-    //             toastSuccess.show()
-    //             let user = JSON.parse(localStorage.getItem('user')) || [];
-    //             user.push({ nome, email, data });
-    //             localStorage.setItem('user', JSON.stringify(user));
-    //             $('#modalRegister').modal('hide')
-    //             load()
-    //         }
-
-    // yyyy-mm-dd
     $('#btnCliente').click(function () {
         if (campo_nome.is(':valid') &&
             campo_email.is(':valid') &&
@@ -66,8 +69,6 @@ $(document).ready(function () {
             login(email)
         }
     });
-
-
 })
 
 
