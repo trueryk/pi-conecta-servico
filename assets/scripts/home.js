@@ -15,6 +15,7 @@ $(document).ready(function () {
                     </li>
         `);
     } else {
+        let currentUser = JSON.parse(localStorage.getItem('currUser'));
         if (currentUser.tipo == 'Cliente') {
             `
             <li class="mx-2 mb-1">|</li>
