@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     let currentUser = JSON.parse(localStorage.getItem('currUser'));
 
-    if (currentUser == []) {
+    if (currentUser.length() == 0) {
         $('#navbar-site-ul').append(
             `
             <li class="mx-2 mb-1">|</li>
