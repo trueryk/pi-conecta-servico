@@ -16,7 +16,7 @@ $(document).ready(function () {
         `);
     } else {
         let currentUser = JSON.parse(localStorage.getItem('currUser'));
-        if (currentUser.tipo == 'Cliente') {
+        if (currentUser.tipo.equals('Cliente')) {
             `
             <li class="mx-2 mb-1">|</li>
                     <li class="nav-item">
@@ -27,7 +27,7 @@ $(document).ready(function () {
                         <a class="nav-link" href="logout.html">Logout</a>
                     </li>
             `
-        } else if (currentUser.tipo == 'Prestador') {
+        } else {
             `
             <li class="mx-2 mb-1">|</li>
                     <li class="nav-item">
