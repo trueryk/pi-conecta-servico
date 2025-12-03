@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body class="blinker">
+
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center gap-2 brand-3d ms-5" href="index.html"
+                aria-label="ConectaServiços - Página inicial">
+                <img src="assets/images/logo.png" class="img-logo" >
+                <span class="fw-bold fs-5 text-blue-hover">Conecta<span class="text-blue">Serviços</span><span
+                        class="shine"></span></span>
+            </a>
+            <!-- <a class="navbar-brand ms-5" href="index.html">LOGO</a> -->
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-site"
+                aria-controls="navbar-site" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbar-site">
+
+                <ul class="navbar-nav mb-2 mb-lg-0 end-0 align-items-center me-5">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"><i
+                                class="bi bi-house me-2"></i> Página Inicial</a>
+                    </li>
+                    <li class="mx-2 mb-1">|</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro.html">Cadastrar</a>
+                    </li>
+                    <li class="mx-2 mb-1">|</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="entrar.html">Entrar</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="mx-2 mb-1">|</li> -->
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li> -->
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <section id="main" class="py-5 position-relative overflow-hidden">
+        <div class="row">
+            <div class="col-lg-6 ps-5">
+                <h1 class="display-5 fw-bold lh-1 mb-3 title">
+                    Conectamos você aos melhores profissionais
+                </h1>
+                <p class="lead">
+                    Plataforma especializada em conectar clientes a prestadores de serviços qualificados e verificados.
+                    Sistema de avaliações transparente para decisões mais seguras.
+                </p>
+
+                <div class="d-flex align-items-center gap-4 mt-4 small">
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="badge bg-success-subtle text-success border success-pill">Verificado</span>
+                        Profissionais checados e aprovados
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="badge bg-warning-subtle text-warning border warning-pill">Seguro</span>
+                        Transações protegidas
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 pe-5 bg-body-tertiary pt-5 rounded-4 services-display">
+                <h3 class="ps-4 fw-bold lh-1 mb-3 title">
+                    Serviços recém registrado
+                </h3>
+                <ul>
+                    <li class="mb-3">
+                        <article class="card card-3d h-100 py-2">
+                            <div class="card-body d-flex gap-3">
+                                <div class="avatar-3d bg-ink text-white fw-bold">${}</div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between">
+                                        <h3 class="h6 mb-1 lead"> ${nome} <i class="bi bi-dash text-black"></i> <span
+                                                class="badge tag-3d bg-body border text-secondary"> ${servico} </span>
+                                        </h3>
+                                        <span
+                                            class="badge bg-success-subtle text-success border d-flex align-items-center"><span>Verificado</span></span>
+                                    </div>
+                                    <p class="mt-2 text-secondary">
+                                        ${descrição}
+                                    </p>
+                                    <br>
+                                    <div class="d-flex gap-2">
+                                        <a class="btn btn-service text-white" href="#" data-id="${id}">Avaliações</a>
+                                        <a class="btn btn-service text-white" href="">Contratar serviço</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="text-center text-secondary fs-4">
+                        ...
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-shell">
+            <div class="container footer-main pt-4">
+                <div class="row align-items-start g-3">
+
+                    <div class="col-md-4">
+                        <div class="footer-brand">
+                            <span class="fw-bold">Conecta<span class="text-orange">Serviços</span></span>
+                        </div>
+                        <p class="mb-1" style="color:#cfe6ff">
+                            Conectando clientes a profissionais qualificados
+                        </p>
+                        <div class="d-flex gap-3 small">
+                            <a href="">Sobre</a>
+                            <a href="">Ajuda</a>
+                            <a href="">Legal</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5">
+                        <div class="footer-links">
+                            <div class="col">
+                                <div class="fw-semibold">Explorar</div>
+                                <a href="como-funciona.html" class="d-block">Como funciona</a>
+                                <a href="profissionais.html" class="d-block">Profissionais</a>
+                                <a href="avaliacoes.html" class="d-block">Avaliações</a>
+                            </div>
+                            <div class="col">
+                                <div class="fw-semibold">Cadastros</div>
+                                <a href="cadastro-cliente.html" class="d-block">Como Cliente</a>
+                                <a href="cadastro-prestador.html" class="d-block">Como Prestador</a>
+                            </div>
+                            <div class="col">
+                                <div class="fw-semibold">Legal</div>
+                                <a href="landing-legal.html#termos" class="d-block">Termos</a>
+                                <a href="landing-legal.html#privacidade" class="d-block">Privacidade</a>
+                                <a href="landing-legal.html#cookies" class="d-block">Cookies</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container d-flex justify-content-between small">
+                    <div>© <span id="y"></span> ConectaServiços</div>
+                    <div class="d-none d-sm-block">
+                        Indaiatuba, SP • Brasil
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>
