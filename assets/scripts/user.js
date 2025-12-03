@@ -1,13 +1,3 @@
-export function users_get() {
-    let user = JSON.parse(localStorage.getItem('user'));
-    return (user);
-}
-
-export function currUser_get() {
-    let currentUser = JSON.parse(localStorage.getItem('currUser'));
-    return (currentUser);
-}
-
 $(document).ready(function () {
     let campo_nome = $('#nome');
     let campo_email = $('#user-email');
