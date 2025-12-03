@@ -59,6 +59,21 @@ $(document).ready(function () {
             login(email)
         }
     });
+
+    $('#btnPrestador').click(function () {
+        if (campo_nome.is(':valid') &&
+            campo_email.is(':valid') &&
+            campo_telefone.is(':valid') &&
+            campo_senha.is(':valid')) {
+            let tipo = 'Prestador';
+            let nome = campo_nome.val()
+            let email = campo_email.val().trim()
+            let telefone = campo_telefone.val()
+            let senha = campo_senha.val().trim();
+            cadastroUser(nome, email, telefone, senha, tipo)
+            login(email)
+        }
+    });
 })
 
 

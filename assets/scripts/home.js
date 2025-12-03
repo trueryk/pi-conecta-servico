@@ -1,16 +1,43 @@
 $(document).ready(function () {
-    let currentUser = JSON.parse(localStorage.getItem('currUser')) || [];
-    alert(currentUser.nome)
-    // let users = JSON.parse(localStorage.getItem('user')) || [];
-    // users = user.users_get()
-    // localStorage.setItem('user', JSON.stringify(user));
 
+    let currentUser = JSON.parse(localStorage.getItem('currUser'));
 
-    // let currentUser = JSON.parse(localStorage.getItem('currUser')) || [];
-    // currentUser = currUser_get();
-    // localStorage.setItem('currUser', JSON.stringify(currUser));
-
-    // alert(users[0].nome);
-    // alert(currUser.nome);
+    if (currentUser == []) {
+        $('#navbar-site-ul').append(
+            `
+            <li class="mx-2 mb-1">|</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro.html">Cadastrar</a>
+                    </li>
+                    <li class="mx-2 mb-1">|</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="entrar.html">Entrar</a>
+                    </li>
+        `);
+    } else {
+        if (currentUser.tipo == 'Cliente') {
+            `
+            <li class="mx-2 mb-1">|</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contratados.html">Meus contratos</a>
+                    </li>
+                    <li class="mx-2 mb-1">|</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.html">Logout</a>
+                    </li>
+            `
+        } else if (currentUser.tipo == 'Prestador') {
+            `
+            <li class="mx-2 mb-1">|</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicos.html">Meus serviços</a>
+                    </li>
+                    <li class="mx-2 mb-1">|</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.html">Logout</a>
+                    </li>
+            `
+        }
+    }
 });
 
