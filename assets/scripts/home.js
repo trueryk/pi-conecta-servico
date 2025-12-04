@@ -21,26 +21,26 @@ $(document).ready(function () {
             $('#navbar-site-ul').append(`
             <li class="mx-2 mb-1">|</li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contratados.html"><i class="bi bi-list"></i>Meus contratos</a>
+                        <a class="nav-link" href="contratados.html"><i class="bi bi-list me-2"></i>Meus contratos</a>
                     </li>
                     <li class="mx-2 mb-1">|</li>
                     <li class="nav-item">
-                        <a id="logout-btn" class="nav-link"><i class="bi bi-box-arrow-left"></i>Logout</a>
+                        <a id="logout-btn" class="nav-link" href="index.html"><i class="bi bi-box-arrow-left me-2"></i>Logout</a>
                     </li>
             `)
         } else {
             $('#navbar-site-ul').append(`
             <li class="mx-2 mb-1">|</li>
                     <li class="nav-item">
-                        <a id="cadastro-servicos-nav" class="nav-link" href="servicos.html"><i class="bi bi-plus-lg"></i>Cadastrar Serviço</a>
+                        <a id="cadastro-servicos-nav" class="nav-link" href="servicos.html"><i class="bi bi-plus-lg me-2"></i>Cadastrar Serviço</a>
                     </li>
                     <li class="mx-2 mb-1">|</li>
                     <li class="nav-item">
-                        <a id="meus-servicos-nav" class="nav-link" href="meusservicos.html"><i class="bi bi-list"></i>Meus serviços</a>
+                        <a id="meus-servicos-nav" class="nav-link" href="meusservicos.html"><i class="bi bi-list me-2"></i>Meus serviços</a>
                     </li>
                     <li class="mx-2 mb-1">|</li>
                     <li class="nav-item">
-                        <a id="logout-btn" class="nav-link"><i class="bi bi-box-arrow-left"></i>Logout</a>
+                        <a id="logout-btn" class="nav-link" href="index.html"><i class="bi bi-box-arrow-left me-2"></i>Logout</a>
                     </li>
             `)
         }
