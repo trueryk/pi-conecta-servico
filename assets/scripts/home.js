@@ -36,7 +36,7 @@ $(document).ready(function () {
                     </li>
                     <li class="mx-2 mb-1">|</li>
                     <li class="nav-item">
-                        <a id="meus-servicos-nav" class="nav-link" href="meusservicos.html"><i class="bi bi-list me-2"></i>Meus serviços</a>
+                        <a id="meus-servicos-nav" class="nav-link" href="meuservicos.html"><i class="bi bi-list me-2"></i>Meus serviços</a>
                     </li>
                     <li class="mx-2 mb-1">|</li>
                     <li class="nav-item">

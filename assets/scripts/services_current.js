@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    $('#meus-servicos-nav').addClass('active')
+
     function carregar_servicos_current_user() {
         let id_prestador = -1;
         let currentUser = JSON.parse(localStorage.getItem('currUser'));
@@ -58,5 +60,5 @@ $(document).ready(function () {
             )
         }
     }
-
-})
+    carregar_servicos_current_user();
+});
