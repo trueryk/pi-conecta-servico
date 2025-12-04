@@ -7,7 +7,7 @@ $(document).ready(function () {
         let currentUser = JSON.parse(localStorage.getItem('currUser'));
         let user = JSON.parse(localStorage.getItem('user')) || [];
         user.forEach((user, id) => {
-            if (currentUser == user) {
+            if (currentUser.email == user.email) {
                 id_prestador = id;
             }
         });
