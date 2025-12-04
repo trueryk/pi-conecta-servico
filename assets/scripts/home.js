@@ -21,26 +21,26 @@ $(document).ready(function () {
             $('#navbar-site-ul').append(`
             <li class="mx-2 mb-1">|</li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contratados.html">Meus contratos</a>
+                        <a class="nav-link" href="contratados.html"><i class="bi bi-list"></i>Meus contratos</a>
                     </li>
                     <li class="mx-2 mb-1">|</li>
                     <li class="nav-item">
-                        <a class="nav-link" href="logout.html">Logout</a>
+                        <a id="logout-btn" class="nav-link"><i class="bi bi-box-arrow-left"></i>Logout</a>
                     </li>
             `)
         } else {
             $('#navbar-site-ul').append(`
             <li class="mx-2 mb-1">|</li>
                     <li class="nav-item">
-                        <a id="cadastro-servicos-nav" class="nav-link" href="servicos.html">Cadastrar Serviço</a>
+                        <a id="cadastro-servicos-nav" class="nav-link" href="servicos.html"><i class="bi bi-plus-lg"></i>Cadastrar Serviço</a>
                     </li>
                     <li class="mx-2 mb-1">|</li>
                     <li class="nav-item">
-                        <a id="meus-servicos-nav" class="nav-link" href="meusservicos.html">Meus serviços</a>
+                        <a id="meus-servicos-nav" class="nav-link" href="meusservicos.html"><i class="bi bi-list"></i>Meus serviços</a>
                     </li>
                     <li class="mx-2 mb-1">|</li>
                     <li class="nav-item">
-                        <a id="logout-btn" class="nav-link" href="logout.html">Logout</a>
+                        <a id="logout-btn" class="nav-link"><i class="bi bi-box-arrow-left"></i>Logout</a>
                     </li>
             `)
         }
@@ -100,6 +100,13 @@ $(document).ready(function () {
             )
         }
     }
+
+    $('#logout-btn').click(function () {
+        let currentUser = JSON.parse(localStorage.getItem('currUser')) || [];
+        currentUser = [];
+        localStorage.setItem('currUser', JSON.stringify(currentUser));
+        reload();
+    });
     carregar_servicos();
 });
 

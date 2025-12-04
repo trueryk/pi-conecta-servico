@@ -63,7 +63,7 @@ $(document).ready(function () {
 
 
     let currentUser = JSON.parse(localStorage.getItem('currUser')) || [];
-    $('#nome').val(currentUser.nome)
+    $('#nome').val(currentUser.nome);
 
     categorias.forEach(categorias => {
         $('.form-select').append(`
