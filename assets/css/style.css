@@ -90,8 +90,8 @@ nav {
 }
 
 .btn-login-cadastro {
-    background-color: var(--main-blue);
-    color: var(--white);
+  background-color: var(--main-blue);
+  color: var(--white);
 }
 
 .btn-login-cadastro:hover {
@@ -187,7 +187,6 @@ ul {
 
 .services-display {
   min-height: 80vh;
-  max-height: 100vh;
   overflow: auto;
   box-shadow: var(--shadow-1);
 }
@@ -208,7 +207,7 @@ ul {
 .form input {
   border: none;
   border-bottom: var(--main-blue-hover) 2px solid;
-    outline: none;
+  outline: none;
 }
 
 #terms {
@@ -216,7 +215,7 @@ ul {
   text-decoration: underline;
 }
 
-a{
+a {
   color: var(--main-blue-hover);
 }
 
@@ -239,5 +238,9 @@ a{
 }
 
 textarea {
-    height: 20vh;
+  height: 20vh;
+}
+
+.card-services-current {
+  overflow: auto;
 }
