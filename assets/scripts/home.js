@@ -60,7 +60,7 @@ $(document).ready(function () {
             servicos.forEach((servico, i) => {
                 $('#servico-lista-home').append(
                     `
- < li class="mb-3" >
+ <li class="mb-3" >
             <article class="card card-3d h-100 py-2">
                 <div class="card-body d-flex gap-3">
                     <div class="avatar-3d bg-ink text-white fw-bold">${servico.nome[0]}</div>
@@ -73,7 +73,7 @@ $(document).ready(function () {
                                 class="badge bg-success-subtle text-success border d-flex align-items-center"><span>Verificado</span></span>
                         </div>
                         <p class="mt-2 text-secondary">
-                            ${servico.descrição}
+                            ${servico.descricao}
                         </p>
                         <br>
                             <div class="d-flex gap-2">
