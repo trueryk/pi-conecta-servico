@@ -56,7 +56,8 @@ $(document).ready(function () {
                     `
             )
         } else {
-            servico.forEach((servico, i) => {
+            let servicos = JSON.parse(localStorage.getItem('serv')) || [];
+            servicos.forEach((servico, i) => {
                 $('#servico-lista-home').append(
                     `
  < li class="mb-3" >
