@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    alert(get_id());
+
     campo_nome = $('#nome');
     campo_tipo = $('#service-tipo');
     campo_descricao = $('#descricao');
@@ -73,9 +73,9 @@ $(document).ready(function () {
     campo_valor.mask('#.##0,00', { reverse: true });
 
     function get_id() {
-        let user = JSON.parse(localStorage.getItem('user')) || [];
         let currentUser = JSON.parse(localStorage.getItem('currUser')) || [];
-        user.forEach(user, i => {
+        let user = JSON.parse(localStorage.getItem('user')) || [];
+        user.forEach((user, i) => {
             if (user.email == currentUser.email) {
                 return i;
             }
