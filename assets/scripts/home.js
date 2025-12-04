@@ -41,5 +41,63 @@ $(document).ready(function () {
             `)
         }
     }
+
+    function carregar_servicos() {
+        let servicos = JSON.parse(localStorage.getItem('serv')) || [];
+        if (servicos == 0) {
+            $('#servico-lista-home').append(
+                `
+                <li class="text-center text-secondary fs-4">
+                        Não há serviços cadastrados
+                </li>
+                <li class="text-center text-secondary fs-4">
+                        ...
+                </li>
+                    `
+            )
+        } else {
+            servico.forEach((servico, i) => {
+                $('#servico-lista-home').append(
+                    `
+ < li class="mb-3" >
+            <article class="card card-3d h-100 py-2">
+                <div class="card-body d-flex gap-3">
+                    <div class="avatar-3d bg-ink text-white fw-bold">${servico.nome[0]}</div>
+                    <div class="flex-grow-1">
+                        <div class="d-flex justify-content-between">
+                            <h3 class="h6 mb-1 lead"> ${servico.nome} <i class="bi bi-dash text-black"></i> <span
+                                class="badge tag-3d bg-body border text-secondary"> ${servico.tipo} </span>
+                            </h3>
+                            <span
+                                class="badge bg-success-subtle text-success border d-flex align-items-center"><span>Verificado</span></span>
+                        </div>
+                        <p class="mt-2 text-secondary">
+                            ${servico.descrição}
+                        </p>
+                        <br>
+                            <div class="d-flex gap-2">
+                                <a class="btn btn-service text-white" href="#" data-id="${i}">Avaliações</a>
+                                <a class="btn btn-service text-white" href="" data-id="${i}">Contratar serviço</a>
+                            </div>
+                    </div>
+                </div>
+            </article>
+        </li >
+`
+                )
+            });
+            $('#servico-lista-home').append(
+                `
+            <li class="text-center text-secondary fs-4">
+                        ...
+                </li>
+            `
+
+            )
+        }
+
+
+
+    }
 });
 

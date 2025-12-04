@@ -72,11 +72,10 @@ $(document).ready(function () {
     campo_valor.unmask();
     campo_valor.mask('#.##0,00', { reverse: true });
 
-    function cadastro_servico(nome, tipo, descicao, valor, id_prestador){
+    function cadastro_servico(nome, tipo, descicao, valor, id_prestador) {
         let servico = JSON.parse(localStorage.getItem('serv')) || [];
         servico.push({ 'nome': nome, 'tipo': tipo, 'descicao': descicao, 'valor': valor, 'id_prestador': id_prestador })
         localStorage.setItem('serv', JSON.stringify(servico));
-        alert('b')
     }
 
     $('#btnCliente').click(function () {
@@ -84,16 +83,17 @@ $(document).ready(function () {
         let tipo = campo_tipo.val();
         let descricao = campo_descricao.val();
         let valor = campo_valor.val();
-        alert('a')
         let currentUser = JSON.parse(localStorage.getItem('currUser')) || [];
         let user = JSON.parse(localStorage.getItem('user')) || [];
         user.forEach((user, i) => {
             if (user.email == currentUser.email) {
-                alert(i)
                 cadastro_servico(nome, tipo, descricao, valor, i)
                 return;
             }
         });
+        campo_tipo.val('')
+        campo_descricao.val('')
+        campo_valor.val('')
     });
 
 });
