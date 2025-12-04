@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    
+
     let campo_nome = $('#nome');
     let campo_email = $('#user-email');
     let campo_telefone = $('#telefone');
@@ -12,6 +12,7 @@ $(document).ready(function () {
         let user = JSON.parse(localStorage.getItem('user')) || [];
         user.push({ 'nome': nome, 'email': email, 'telefone': telefone, 'senha': senha, 'tipo': tipo });
         localStorage.setItem('user', JSON.stringify(user));
+        window.location.href = 'index.html';
     }
 
     function login(email) {
