@@ -92,12 +92,9 @@ $(document).ready(function () {
                         ...
                 </li>
             `
-
             )
         }
-
-
-
     }
+    carregar_servicos();
 });
 
