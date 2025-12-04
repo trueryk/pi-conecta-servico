@@ -13,7 +13,8 @@ $(document).ready(function () {
                     <li class="nav-item">
                         <a class="nav-link" href="entrar.html">Entrar</a>
                     </li>
-        `);
+        `)
+
     } else {
         let currentUser = JSON.parse(localStorage.getItem('currUser'));
         if (currentUser.tipo == 'Cliente') {

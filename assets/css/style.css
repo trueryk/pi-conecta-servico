@@ -231,3 +231,13 @@ a{
 .card {
   box-shadow: var(--shadow-2);
 }
+
+.card-services {
+  height: 80vh;
+  width: 80vw;
+  box-shadow: var(--shadow-2);
+}
+
+textarea {
+    height: 20vh;
+}
