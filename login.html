@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="row">
+    <div class="row d-flex justify-content-center align-items-center">
 
         <div id="left-panel-register" class="col-7 d-flex justify-content-center align-items-center ">
 
@@ -29,27 +29,19 @@
                         <label for="senha" class="pb-1 pt-5">Senha</label>
                         <input type="password" id="senha" name="senha" placeholder="Digite sua senha"
                             class="ps-1 border-bottom" minlength="8" required>
-
+                        <div class="d-flex flex-row pt-4">
+                            <div>
+                                <label for="rememberme" class="text-secondary">Lembre de mim </label> <input
+                                    type="checkbox" name="rememberme" id="rememberme">
+                            </div>
+                            <p class="ps-5 text-secondary"><a class="lighter-link">Esqueceu sua senha?</a></p>
+                        </div>
                         <p class="ps-3 pt-4 text-secondary">Ainda não possuí seu cadastro? <a href="cadastro.html"
                                 class="lighter-link">Clique aqui para criar sua conta</a></p>
                         <div class="row d-flex justify-content-center ps-5 pe-5 pt-4">
-                                <button type="submit" class="btn btn-login-cadastro col-4" id="btnLogin">Entrar</button>
+                            <button type="submit" class="btn btn-login-cadastro col-4" id="btnLogin">Entrar</button>
                         </div>
                     </form>
-                </div>
-
-
-            </div>
-        </div>
-        <div class="col-5 d-flex justify-content-center align-items-center">
-
-            <div class="card bg-white px-5 py-5 rounded-4">
-                <h3 class="text-blue-hover">Bem vindo à</h3>
-                <div class="d-flex flex-row">
-                    <img class="logo-register" src="assets/images/logo-tpt.png" alt="">
-                    <h2><span class="fw-bold text-blue-hover">Conecta<span class="text-blue">Serviços</span><span
-                                class="shine"></span></span>
-                    </h2>
                 </div>
             </div>
         </div>

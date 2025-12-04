@@ -62,8 +62,9 @@ $(document).ready(function () {
         } else {
             let servicos = JSON.parse(localStorage.getItem('serv')) || [];
             servicos.forEach((servico, i) => {
-                $('#servico-lista-home').append(
-                    `
+                if (servico.status) {
+                    $('#servico-lista-home').append(
+                        `
  <li class="mb-3" >
             <article class="card card-3d h-100 py-2">
                 <div class="card-body d-flex gap-3">
@@ -83,13 +84,15 @@ $(document).ready(function () {
                             <div class="d-flex gap-2">
                                 <a class="btn btn-service text-white" href="#" data-id="${i}">Avaliações</a>
                                 <a class="btn btn-service text-white" href="" data-id="${i}">Contratar serviço</a>
+                                <p class="end-0 pe-5 pt-2 position-absolute">${servico.valor}</p>
                             </div>
                     </div>
                 </div>
             </article>
         </li >
 `
-                )
+                    )
+                }
             });
             $('#servico-lista-home').append(
                 `

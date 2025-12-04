@@ -76,7 +76,7 @@ $(document).ready(function () {
 
     function cadastro_servico(nome, tipo, descricao, valor, id_prestador) {
         let servico = JSON.parse(localStorage.getItem('serv')) || [];
-        servico.push({ 'nome': nome, 'tipo': tipo, 'descricao': descricao, 'valor': valor, 'id_prestador': id_prestador })
+        servico.push({ 'nome': nome, 'tipo': tipo, 'descricao': descricao, 'valor': valor, 'id_prestador': id_prestador , 'status' : true })
         localStorage.setItem('serv', JSON.stringify(servico));
     }
 
@@ -97,5 +97,4 @@ $(document).ready(function () {
         campo_descricao.val('')
         campo_valor.val('')
     });
-
 });
