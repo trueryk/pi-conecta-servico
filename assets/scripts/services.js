@@ -72,23 +72,14 @@ $(document).ready(function () {
     campo_valor.unmask();
     campo_valor.mask('#.##0,00', { reverse: true });
 
-    function get_id() {
-        let id = -1;
-        let currentUser = JSON.parse(localStorage.getItem('currUser')) || [];
-        let user = JSON.parse(localStorage.getItem('user')) || [];
-        user.forEach((user, i) => {
-            if (user.email == currentUser.email) {
-                id = i;
-            }
-        });
-        return id;
-    }
-
     function cadastro_servico(nome, tipo, descicao, valor, id_prestador) {
-
+        let servico = JSON.parse(localStorage.getItem('serv')) || [];
+        servico.push({'nome': nome, 'tipo': tipo, 'descicao': descicao, 'valor': valor, 'id_prestador': id_prestador})
+        localStorage.setItem('serv', JSON.stringify(servico));
     }
 
     $('#btnCliente').click(function () {
+        let id = -1;
         if (campo_nome.is(':valid') &&
             campo_tipo.is(':valid') &&
             campo_descricao.is(':valid') &&
@@ -97,9 +88,14 @@ $(document).ready(function () {
             let tipo = campo_tipo.val();
             let descricao = campo_descricao.val();
             let valor = campo_valor.val();
-
-
-            cadastro_servico(nome, tipo, descricao, valor, get_id())
+            let currentUser = JSON.parse(localStorage.getItem('currUser')) || [];
+            let user = JSON.parse(localStorage.getItem('user')) || [];
+            user.forEach((user, i) => {
+                if (user.email == currentUser.email) {
+                    id = i;
+                }
+            });
+            cadastro_servico(nome, tipo, descricao, valor, id)
         }
     });
 
