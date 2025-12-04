@@ -20,7 +20,6 @@ $(document).ready(function () {
         if (currentUser.tipo == 'Cliente') {
             $('#navbar-site-ul').append(`
             <li class="mx-2 mb-1">|</li>
-                    <li class="mx-2 mb-1">|</li>
                     <li class="nav-item">
                         <a id="logout-btn" class="nav-link" href="index.html"><i class="bi bi-box-arrow-left me-2"></i>Logout</a>
                     </li>
