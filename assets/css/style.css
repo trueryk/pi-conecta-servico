@@ -243,5 +243,6 @@ textarea {
 
 .card-services-current {
   width: 80vw;
+  height: 80vh;
   overflow: scroll;
 }
