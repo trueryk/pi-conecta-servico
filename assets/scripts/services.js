@@ -72,9 +72,9 @@ $(document).ready(function () {
     campo_valor.unmask();
     campo_valor.mask('#.##0,00', { reverse: true });
 
-    function cadastro_servico(nome, tipo, descicao, valor, id_prestador) {
+    function cadastro_servico(nome, tipo, descricao, valor, id_prestador) {
         let servico = JSON.parse(localStorage.getItem('serv')) || [];
-        servico.push({ 'nome': nome, 'tipo': tipo, 'descicao': descicao, 'valor': valor, 'id_prestador': id_prestador })
+        servico.push({ 'nome': nome, 'tipo': tipo, 'descricao': descricao, 'valor': valor, 'id_prestador': id_prestador })
         localStorage.setItem('serv', JSON.stringify(servico));
     }
 
