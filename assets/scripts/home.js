@@ -32,11 +32,15 @@ $(document).ready(function () {
             $('#navbar-site-ul').append(`
             <li class="mx-2 mb-1">|</li>
                     <li class="nav-item">
-                        <a class="nav-link" href="servicos.html">Meus serviços</a>
+                        <a id="cadastro-servicos-nav" class="nav-link" href="servicos.html">Cadastrar Serviço</a>
                     </li>
                     <li class="mx-2 mb-1">|</li>
                     <li class="nav-item">
-                        <a class="nav-link" href="logout.html">Logout</a>
+                        <a id="meus-servicos-nav" class="nav-link" href="meusservicos.html">Meus serviços</a>
+                    </li>
+                    <li class="mx-2 mb-1">|</li>
+                    <li class="nav-item">
+                        <a id="logout-btn" class="nav-link" href="logout.html">Logout</a>
                     </li>
             `)
         }

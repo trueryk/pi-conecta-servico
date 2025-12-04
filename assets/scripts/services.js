@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    $('#cadastro-servicos-nav').addClass('active')
+
     campo_nome = $('#nome');
     campo_tipo = $('#service-tipo');
     campo_descricao = $('#descricao');
