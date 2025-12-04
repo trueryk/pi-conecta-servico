@@ -73,13 +73,15 @@ $(document).ready(function () {
     campo_valor.mask('#.##0,00', { reverse: true });
 
     function get_id() {
+        let id = -1;
         let currentUser = JSON.parse(localStorage.getItem('currUser')) || [];
         let user = JSON.parse(localStorage.getItem('user')) || [];
         user.forEach((user, i) => {
             if (user.email == currentUser.email) {
-                return i;
+                id = i;
             }
         });
+        return id;
     }
 
     function cadastro_servico(nome, tipo, descicao, valor, id_prestador) {
@@ -97,7 +99,7 @@ $(document).ready(function () {
             let valor = campo_valor.val();
 
 
-            cadastro_servico(nome, tipo, descricao, valor)
+            cadastro_servico(nome, tipo, descricao, valor, get_id())
         }
     });
 
