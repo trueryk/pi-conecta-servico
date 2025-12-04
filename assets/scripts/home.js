@@ -11,7 +11,7 @@ $(document).ready(function () {
                     </li>
                     <li class="mx-2 mb-1">|</li>
                     <li class="nav-item">
-                        <a class="nav-link" href="entrar.html">Entrar</a>
+                        <a class="nav-link" href="login.html">Entrar</a>
                     </li>
         `)
 

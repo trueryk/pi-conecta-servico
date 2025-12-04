@@ -18,29 +18,22 @@
             <div class="card-container bg-white d-flex flex-column rounded-4 pt-5 position-relative">
                 <div class="position-absolute top-0 start-0 ms-4 mt-3"><a href="index.html"> <i
                             class="bi bi-arrow-return-left pe-3"></i>Voltar a página inicial</a></div>
-                <h4 class="text-center" id="title-register">CADASTRO</h4>
+                <h4 class="text-center" id="title-register">ENTRAR</h4>
 
                 <div>
-                    <form id="form-cadastro" class="form d-flex flex-column px-5 pt-4" method="dialog">
-                        <label for="nome" class="pb-1">Nome</label>
-                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo"
-                            class="ps-1 border-bottom" required>
-
-                        <label for="user-email" class="pb-1 pt-4">Email</label>
+                    <form id="form-login" class="form d-flex flex-column px-5 pt-4" method="dialog">
+                        <label for="user-email" class="pb-1 pt-5">Email</label>
                         <input type="email" id="user-email" name="user-email" placeholder="Digite o seu email completo"
                             class="ps-1 border-bottom" required>
 
-                        <label for="telefone" class="pb-1 pt-4" data-mask="00 00000-0000">Telefone</label>
-                        <input type="text" id="telefone" name="telefone" placeholder="(99) 99999-9999"
-                            class="ps-1 border-bottom" minlength="15" required>
-
-                        <label for="senha" class="pb-1 pt-4">Senha</label>
+                        <label for="senha" class="pb-1 pt-5">Senha</label>
                         <input type="password" id="senha" name="senha" placeholder="Digite sua senha"
                             class="ps-1 border-bottom" minlength="8" required>
-                        <p class="ps-3 pt-3 text-secondary">Ainda não possuí seu cadastro? <a href="cadastro.html"
+
+                        <p class="ps-3 pt-4 text-secondary">Ainda não possuí seu cadastro? <a href="cadastro.html"
                                 class="lighter-link">Clique aqui para criar sua conta</a></p>
                         <div class="row d-flex justify-content-center ps-5 pe-5 pt-4">
-                                <button type="submit" class="btn btn-login-cadastro" disabled id="btnCliente">Entrar</button>
+                                <button type="submit" class="btn btn-login-cadastro col-4" id="btnLogin">Entrar</button>
                         </div>
                     </form>
                 </div>
